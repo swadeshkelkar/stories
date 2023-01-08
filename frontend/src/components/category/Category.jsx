@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import "./category.css"
 import { category } from "../../assets/data/data"
 import "slick-carousel/slick/slick.css"
@@ -6,8 +6,8 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import { GrFormPrevious } from "react-icons/gr"
 import { MdNavigateNext } from "react-icons/md"
-import axios from "axios"
-import { useLocation } from "react-router-dom"
+
+
 import { Link } from "react-router-dom"
 
 const SampleNextArrow = (props) => {
@@ -50,16 +50,10 @@ export const Category = () => {
     ],
   }
 
-  const [cats, setCat] = useState([])
-  const { search } = useLocation()
 
-  useEffect(() => {
-    const getCat = async () => {
-      const res = await axios.get("/category" + search)
-      setCat(res.data)
-    }
-    getCat()
-  }, [search])
+
+
+  
   return (
     <>
       <section className='category'>

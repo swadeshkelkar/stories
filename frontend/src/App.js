@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import { Footer } from "./components/footer/Footer"
 import { Header } from "./components/header/Header"
 import { Home } from "./pages/home/Home"
@@ -8,12 +8,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { DetailsPages } from "./pages/details/DetailsPages"
 import { Account } from "./pages/account/Account"
 import { Create } from "./components/create/Create"
-import { Context } from "./context/Context"
+
 import About from "./pages/about/About"
 
 const App = () => {
-  //after login
-  const { user } = useContext(Context)
+
+  
   return (
     <>
       <Router>

@@ -7,10 +7,9 @@ import axios from "axios"
 export const Account = () => {
   const { user, dispatch } = useContext(Context); const {token, other} = user;
 
-  // same from create file
   const [file, setFile] = useState(null)
   const [username, setUsername] = useState("")
-  const [email, setEmail] = useState("")
+
   const [password, setPassword] = useState("")
   const [succ, setSucc] = useState(false)
   const PublicFlo = "http://localhost:5000/images/"

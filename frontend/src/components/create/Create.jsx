@@ -1,11 +1,10 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "./create.css"
 import { IoIosAddCircleOutline } from "react-icons/io"
 import { useState } from "react"
 import { useContext } from "react"
 import { Context } from "../../context/Context"
 import axios from "axios"
-import { useLocation } from "react-router-dom"
 
 export const Create = () => {
   const [title, setTitle] = useState("")

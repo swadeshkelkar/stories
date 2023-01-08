@@ -1,11 +1,11 @@
 import React from "react"
 import "./blog.css"
 
-import { AiOutlineTags, AiOutlineClockCircle, AiOutlineComment, AiOutlineShareAlt } from "react-icons/ai"
+import { AiOutlineTags, AiOutlineClockCircle } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
 export const Card = ({ posts }) => {
-  // function copy(){console.log(this.val())}
+
   const PublicFlo = "http://localhost:5000/images/"
   return (
     <>

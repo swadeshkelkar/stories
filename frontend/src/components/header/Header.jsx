@@ -3,10 +3,9 @@ import stories from "../../assets/images/stories.svg"
 import { Context } from "../../context/Context"
 import "./header.css"
 import { User } from "./User"
-import { nav } from "../../assets/data/data"
 import { Link } from "react-router-dom"
 export const Header = () => {
-  const { user, dispatch } = useContext(Context);
+  const { user } = useContext(Context);
   window.addEventListener("scroll", function () {
     const header = this.document.querySelector(".header")
     header.classList.toggle("active", this.window.scrollY > 100)
