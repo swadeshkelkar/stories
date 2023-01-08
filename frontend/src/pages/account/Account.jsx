@@ -12,7 +12,7 @@ export const Account = () => {
 
   const [password, setPassword] = useState("")
   const [succ, setSucc] = useState(false)
-  const PublicFlo = "http://localhost:5000/images/"
+  const PublicFlo = "https://stories-x536.onrender.com/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -40,7 +40,7 @@ export const Account = () => {
       }
     }
     try {
-      const res = await axios.put("/user/" + other._id, updateUser, config)
+      const res = await axios.put("https://stories-x536.onrender.com/user/" + other._id, updateUser, config)
       setSucc(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data })
       console.log(res.data);

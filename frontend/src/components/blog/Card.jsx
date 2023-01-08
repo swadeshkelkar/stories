@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 export const Card = ({ posts }) => {
 
-  const PublicFlo = "http://localhost:5000/images/"
+  const PublicFlo = "https://stories-x536.onrender.com/images/"
   return (
     <>
       <section className='blog'>

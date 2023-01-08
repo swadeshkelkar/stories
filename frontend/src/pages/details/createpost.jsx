@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import "./details.css"
 import "../../components/header/header.css"
-import img from "../../assets/images/product1.jpg"
+
 import { useLocation } from "react-router-dom"
 import axios from "axios"
 import { Link } from "react-router-dom"
@@ -18,7 +18,7 @@ export const DetailsPages = () => {
   const [post, setPost] = useState({})
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path)
+      const res = await axios.get("https://stories-x536.onrender.com/posts/" + path)
       console.log(res)
       //setp 2
       setPost(res.data)
@@ -28,12 +28,12 @@ export const DetailsPages = () => {
 
   // step 3
   // file create garne time add garne
-  const PublicFlo = "http://localhost:5000/images/"
+  const PublicFlo = "https://stories-x536.onrender.com/images/"
   const { user } = useContext(Context)
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, { data: { username: user.username } })
+      await axios.delete(`https://stories-x536.onrender.com/posts/${post._id}`, { data: { username: user.username } })
       window.location.replace("/")
     } catch (error) {}
   }
@@ -58,7 +58,7 @@ export const DetailsPages = () => {
             <p>{post.desc}</p>
 
             <p>
-              Author: <Link to={`/?user=${post.username}`}>{post.username}</Link>
+              Author: <Link to={`https://stories-x536.onrender.com/?user=${post.username}`}>{post.username}</Link>
             </p>
           </div>
         </div>

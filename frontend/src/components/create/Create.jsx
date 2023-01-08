@@ -38,7 +38,7 @@ export const Create = () => {
       }
     }
     try {
-      const res = await axios.post("/post", newPost, config)  
+      const res = await axios.post("https://stories-x536.onrender.com/post", newPost, config)  
       window.location.replace("/post/" + res.data._id)
     } catch (error) {}
   }
@@ -77,5 +77,4 @@ export const Create = () => {
         </div>
       </section>
     </>
-  )
-}
+  )}

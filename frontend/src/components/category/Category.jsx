@@ -48,12 +48,7 @@ export const Category = () => {
         },
       },
     ],
-  }
-
-
-
-
-  
+  } 
   return (
     <>
       <section className='category'>
@@ -64,7 +59,7 @@ export const Category = () => {
                 <div className='box' key={item.id}>
                   <img src={item.cover} alt='cover' />
                   <div className='overlay'>
-                    <Link to={`/?cat=${item.category}`} className='link'>
+                    <Link to={`https://stories-x536.onrender.com/?cat=${item.category}`} className='link'>
                       <h3>{item.category}</h3>
                     </Link>              
                   </div>

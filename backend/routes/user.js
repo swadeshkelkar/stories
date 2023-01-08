@@ -36,7 +36,7 @@ router.put("/:id", auth, async (req, res) => {
 
 // delete
 router.delete("/:id", auth, async (req, res) => {
-  if (req.body.userId === req.params.id) {
+
     // delete all post of user and user account
     try {
       const user = await User.findById(req.params.id)
@@ -51,9 +51,7 @@ router.delete("/:id", auth, async (req, res) => {
     } catch (error) {
       res.status(404).json("User not found")
     }
-  } else {
-    res.status(401).json("You can delete only your account")
-  }
+  
 })
 /* 
  {

@@ -14,7 +14,7 @@ export const Home = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get("/post" + search)
+      const res = await axios.get("https://stories-x536.onrender.com/post" + search)
       setPosts(res.data)
     }
     fetchPost()

@@ -14,7 +14,7 @@ export const Login = () => {
     e.preventDefault()
     dispatch({ type: "LOGINSTART" })
     try {
-      const res = await axios.post("/auth/login", {
+      const res = await axios.post("https://stories-x536.onrender.com/auth/login", {
         email: userRef.current.value,
         password: passRef.current.value,
       })

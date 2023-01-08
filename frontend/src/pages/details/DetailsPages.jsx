@@ -35,12 +35,12 @@ export const DetailsPages = () => {
   }, [path])
 
 
-  const PublicFlo = "http://localhost:5000/images/"
+  const PublicFlo = "https://stories-x536.onrender.com/images/"
   const { user } = useContext(Context); const config = {headers: {Authorization: `Bearer ${user.token}`}};
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/post/${post._id}`, { data: { username: user.username } }, config)
+      await axios.delete(`https://stories-x536.onrender.com/post/${post._id}`, { data: { username: user.other.username } }, config)
       window.location.replace("/")
     } catch (error) {}
   }
@@ -48,7 +48,7 @@ export const DetailsPages = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/post/${post._id}`, { username: user.other.username, title, desc }, config)
+      await axios.put(`https://stories-x536.onrender.com/post/${post._id}`, { username: user.other.username, title, desc }, config)
       window.location.reload()
     } catch (error) {}
   }
@@ -79,7 +79,7 @@ export const DetailsPages = () => {
             {update ? <textarea value={desc} cols='30' rows='10' className='updateInput' onChange={(e) => setDesc(e.target.value)}></textarea> : <p>{post.desc}</p>}
 
             <p>
-              Author: <Link to={`/?user=${post.username}`}>{post.username}</Link>
+              Author: <Link to={`https://stories-x536.onrender.com/?user=${post.username}`}>{post.username}</Link>
             </p>
           </div>
         </div>
