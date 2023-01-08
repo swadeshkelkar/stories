@@ -1,0 +1,11 @@
+.about{
+    background-color: white;
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    border: 1px solid black; border-radius: 16px; padding-top: 200px;
+    width: 70%;
+    margin: auto;
+}
+.about h1{text-align: center;}
+.about p{text-align: center; font-size: 22px;}
