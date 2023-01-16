@@ -5,11 +5,11 @@ A blogging platform built with MERN stack. Implemented the CRUD functionalities 
 ## Setup and run app
 
 1. Backend
- Create a .env file in the backend folder and put your MONGODB URI into it as below.
+- Create a .env file in the backend folder and put your MONGODB URI into it as below.
 ```bash
 URI=<your key>
 ```
-Now run below commands
+- Now run below commands
 ```bash
   cd backend
   npm install
@@ -17,7 +17,7 @@ Now run below commands
 ```
 
 2. Frontend
-Run below commands
+- Run below commands
 ```bash
   cd frontend
   npm install
